@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        roboto: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <div class="bg-[#246db6] h-screen w-full">
+        <div class="flex justify-center items-center bg-white p-5">
+            <div class="w-full max-w-lg bg-white p-5 rounded-lg">
+                <img class="w-full rounded-lg" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/guess-game-img.png" alt="Guess Game" />
+                <p class="text-center font-roboto text-[24px] text-[#323f4b] font-medium mt-5">
+                    Find out the right number between 1 to 100
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center bg-[#246db6] py-8 px-4">
+            <h1 class="flex items-center justify-center text-white font-roboto text-4xl font-bold text-center">
+                Guess The Number
+                <img class="w-12" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/guess-number-img.png" alt="Number" />
+            </h1>
+
+            <input type="text" class="text-center text-[#1f2933] font-roboto text-[30px] w-[300px] p-[10px] my-4 border" id="userInput" />
+
+            <button class="bg-cyan-600 hover:bg-cyan-800 text-white text-base md:text-lg font-medium p-[10px] rounded m-[20px] w-[170px] rounded transition-all duration-300" onclick="checkGuess()">
+                Check
+            </button>
+
+            <p class="text-white font-roboto text-base md:text-xl font-medium py-3 mt-5 w-full max-w-[90%]  text-center" id="gameResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
